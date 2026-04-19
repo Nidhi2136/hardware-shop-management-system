@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Local app
-    'hardware_shop.shop',
+    'shop',
 ]
 
 
@@ -85,20 +85,26 @@ TEMPLATES = [
 # =========================
 # WSGI
 # =========================
-WSGI_APPLICATION = 'hardware_shop.hardware_shop.wsgi.application'
+WSGI_APPLICATION = 'hardware_shop.wsgi.application'
 
 
 # =========================
 # DATABASE
 # =========================
+#DATABASES = {
+#    "default": {
+ #       "ENGINE": "django.db.backends.postgresql",
+#        "NAME": "hardwarepro_db",
+#        "USER": "postgres",
+ #       "PASSWORD": "Nidhi@213",
+ #       "HOST": "localhost",
+ #       "PORT": "5432",
+ #   }
+#}
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "hardwarepro_db",
-        "USER": "postgres",
-        "PASSWORD": "Nidhi@213",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 # =========================
