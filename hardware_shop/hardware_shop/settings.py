@@ -1,4 +1,12 @@
 from pathlib import Path
+import os
+from decouple import config   # pip install python-decouple
+
+# =========================
+# BASE DIRECTORY
+# =========================
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 # =========================
 # BASE DIRECTORY
 # =========================
